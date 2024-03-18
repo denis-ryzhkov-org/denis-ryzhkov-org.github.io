@@ -1,0 +1,7 @@
+|dir
+blog
+dream
+img
+lit
+|raw
+<li><a href="mailto:denis@ryzhkov.org">mail</a></li>

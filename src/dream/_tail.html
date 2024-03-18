@@ -1,0 +1,27 @@
+<style>
+#quote {
+  font-family: monospace;
+  font-size: smaller;
+  text-align: right;
+  opacity: 0.2;
+}
+
+@keyframes glitch {
+    0% {content: "е г о"; font-weight: bold}
+   10% {content: "е г о"; font-weight: bold}
+   15% {content: "этого"; font-weight: normal}
+   20% {content: "е г о"; font-weight: bold}
+   25% {content: "этого"; font-weight: normal}
+  100% {content: "этого"; font-weight: normal}
+}
+
+#glitch::before {
+  content: "";
+  animation: glitch 1s linear infinite alternate;
+}
+</style>
+
+<div id="quote">
+Я захлестнула за границу суждений,<br />
+была Алисой <span id="glitch"></span> странного мира.
+</div>
