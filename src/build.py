@@ -41,14 +41,19 @@ def build(path, titles):
                 continue
 
             if line_type == "blog":
-                date = parts[0]
+                date, note = parts
                 content.append(
-                    f'<li><a name="{date}" href="#{date}">{date}</a> - {parts[1]}</li>'
+                    f'<li><a name="{date}" href="#{date}">{date}</a> - {note}</li>'
                 )
                 continue
 
             if line_type == "gif":
-                content.append(f'<li>{parts[-1]}<br><img src="{parts[0]}.gif"></li>')
+                name = parts[0]
+                title = parts[-1]  # If `len(parts) == 1` then `title == name`.
+                content.append(
+                    f'<li><a name="{name}" href="#{name}">{title}</a><br />'
+                    f'<img src="{name}.gif"></li>'
+                )
                 continue
 
             if line_type == "dir":
