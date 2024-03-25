@@ -47,12 +47,12 @@ def build(path, titles):
                 )
                 continue
 
-            if line_type == "gif":
+            if line_type in ("gif", "png"):
                 name = parts[0]
                 title = parts[-1]  # If `len(parts) == 1` then `title == name`.
                 content.append(
                     f'<li><a name="{name}" href="#{name}">{title}</a><br />'
-                    f'<img src="{name}.gif"></li>'
+                    f'<img src="{name}.{line_type}"></li>'
                 )
                 continue
 

@@ -102,5 +102,8 @@ pained-pump|pained pump
 walking-hand|walking hand
 sadness
 liquid-azote|liquid azote
+|png
+stop
+|gif
 creon|Creon
 eye
